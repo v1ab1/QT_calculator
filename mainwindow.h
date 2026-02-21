@@ -17,6 +17,10 @@ private:
         Calculation
     };
     State state;
+    double currentValue;
+    double addValue;
+    double rememberedValue;
+    QString pendingOperation;
 
 public:
     MainWindow(QWidget *parent = nullptr);
@@ -24,6 +28,8 @@ public:
 
 private slots:
     void on_number_input();
+    void on_operation_nput();
+    void save_value();
 
 private:
     Ui::MainWindow *ui;
